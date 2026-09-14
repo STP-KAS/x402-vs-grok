@@ -25,4 +25,4 @@ Review 2026-09-14. Tag `v1.0.0-rc.1` @ `040b1ec`.
 | Offline protocol checks | 22/22 `ok: true` then fsync EPERM | **live** with a Windows write-out fail |
 | Independent audit | readiness gate open | **absent** |
 | Stables work without new binding | Luke + hardcoded KAS | **wrong** |
-| Master-file “TN10 alpha” | tag is `v1.0.0-rc.1` 13 Sep | **stale pin** |
+| Master-file “TN10 alpha” | was stale; updated this pass to RC.1 | **fixed in kaspa-master-file@662c77a** |
