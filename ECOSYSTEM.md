@@ -81,7 +81,7 @@ Local experiments. 0 stars. Honest labels on the READMEs are often better than t
 
 | Repo | 402 / money claim | Pushback |
 | --- | --- | --- |
-| kaspa-master-file | Pins kaspa-x402 | Pin still says **alpha**; RC.1 exists. Fix the pin. |
+| kaspa-master-file | Pins kaspa-x402 | Pin updated this pass to **v1.0.0-rc.1**. |
 | kns | HTTP 402 route | Shape, not x402 v2. Name uniqueness is indexer FCFS, not consensus. |
 | ishum | kUSD reserved + USDT guest | Till. **Not x402.** See [x402-ishum](https://github.com/STP-KAS/x402-ishum). |
 | kaspa-till | “reserved Kaspa L1 stable till” | Reserved ≠ issued. |

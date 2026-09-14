@@ -7,7 +7,7 @@
 3. Prefer `exact` / `standard-native` until you have a reason to lock capital in escrow.
 4. Verify successor `value` on every covenant path you copy. They did it on claim. Copy **that**, not the pragma.
 5. File Windows bugs: `.gitattributes` `*.sil text eol=lf`, skip Unix modes on win32, don’t `fsync` in a way that EPERMs the whole proof.
-6. Update [kaspa-master-file](https://github.com/STP-KAS/kaspa-master-file) R-X402 from “TN10 alpha” to **`v1.0.0-rc.1`, mainnet blocked**.
+6. [kaspa-master-file](https://github.com/STP-KAS/kaspa-master-file) R-X402 is updated this pass to **`v1.0.0-rc.1`, mainnet blocked**.
 
 ## Do not
 
