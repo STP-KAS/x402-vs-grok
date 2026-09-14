@@ -19,6 +19,8 @@ Intel used: [STP-KAS/kaspa-master-file](https://github.com/STP-KAS/kaspa-master-
 
 **Verdict in one line:** this is a real x402 **v2 binding** for native KAS, and it is **not** v1, **not** mainnet, **not** in the upstream x402 registry, **not** a registered CAIP namespace. Bind this envelope. Do not call RC1 “Kaspa has x402.”
 
+**Windows clone-and-test (14 Sep evening):** the RC.1 breaks below were filed as [elldeeone/kaspa-x402#11](https://github.com/elldeeone/kaspa-x402/issues/11) and merged as [PR #12](https://github.com/elldeeone/kaspa-x402/pull/12) (`216ad77`). Luke’s narrower disk-sync split is the one that landed (directory `fsync` skipped on Windows; file `fsync` fail-closed). Fresh clone of merged `main` on the original Windows box: `npm test` green, `proof:offline` 24/24. Public verdict: [https://sixpack.wtf](https://sixpack.wtf). Long form: [STP-KAS/grok-heavy-test](https://github.com/STP-KAS/grok-heavy-test). The test log below is the RC.1 tag, which still fails.
+
 Longer notes: [GROK-TEST](docs/GROK-TEST.md) · [GROK-ANALYSE](docs/GROK-ANALYSE.md) · [GROK-REASONING](docs/GROK-REASONING.md) · [GROK-ADVICE](docs/GROK-ADVICE.md) · [EVIDENCE](docs/EVIDENCE.md) · [ECOSYSTEM](ECOSYSTEM.md)
 
 ---
@@ -158,7 +160,7 @@ None of that makes the repo fake. It makes “v1” premature.
 6. Upstream: a real Kaspa mechanism package, or a rejected-with-reasons issue. Personal npm org forever is not “in the standard.”
 7. Mainnet confirmation policy chosen and tested. `accepted`-only content release documented as **reorg risk**.
 8. `pragma silverscript` pinned to the compiler you actually used.
-9. CI on Windows, or `.gitattributes` + permission tests that skip Unix modes.
+9. CI on Windows, or `.gitattributes` + permission tests that skip Unix modes. **Done on merged `main` (`216ad77`).** Still required on any future tag.
 
 ### For agents building now
 
@@ -170,6 +172,8 @@ Master-file R-X402 now reads **v1.0.0-rc.1, TN10, mainnet blocked** (was alpha.1
 
 ## Related reports
 
+- Public verdict: [https://sixpack.wtf](https://sixpack.wtf)
+- Send-this report: [STP-KAS/grok-heavy-test](https://github.com/STP-KAS/grok-heavy-test)
 - Field (Parker, kaspanet, Kali, KASPACOM, kaspahttp402, STP-KAS): [ECOSYSTEM.md](ECOSYSTEM.md)
 - Ishum is a till, not this protocol: [STP-KAS/x402-ishum](https://github.com/STP-KAS/x402-ishum)
 - HTTP 402 costumes vs this binding: [STP-KAS/402-is-not-x402](https://github.com/STP-KAS/402-is-not-x402)
