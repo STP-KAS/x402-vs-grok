@@ -1,4 +1,6 @@
-> **Experimental only. Not a product.** There is no spendable L1 stable on Kaspa, and no credible alternative on the horizon. Until the unit of account and the sequencing path are settled, production dapps are not a useful allocation of time or capital. [KASPAglobal](https://x.com/kaspaglobal/status/2100536064683176270) · [DISCLAIMER.md](DISCLAIMER.md)
+> **Experimental only. Not a product.** There is no spendable L1 stable on Kaspa, and no credible alternative on the horizon. Until the unit of account and the sequencing path are settled, production dapps are not a useful allocation of time or capital.
+>
+> Do not use wallet integrations on this GitHub. STP remains a clown. [DISCLAIMER.md](DISCLAIMER.md)
 
 # x402 vs grok
 
@@ -33,7 +35,7 @@ Ran on Windows (PowerShell), Node **v24.19.0**, clone of tag `v1.0.0-rc.1`.
 
 ### What actually broke
 
-**1. Default Windows checkout fails `npm test`.**  
+**1. Default Windows checkout fails `npm test`.**
 `core.autocrlf=true`. No `.gitattributes`. `contracts/kaspa-x402-escrow-v4.sil` checks out as CRLF. Launch-identity SHA-256 of the source is pinned to LF:
 
 | | SHA-256 of `.sil` |
@@ -43,10 +45,10 @@ Ran on Windows (PowerShell), Node **v24.19.0**, clone of tag `v1.0.0-rc.1`.
 
 `packages/covenant/test/covenant.test.ts` failed 2/13 until the file was rewritten without `\r`. After LF-normalize, the 27 covenant tests passed. CI cannot see this: `.github/workflows/ci.yml` is **`ubuntu-latest` only**.
 
-**2. Unix file modes are asserted on Windows.**  
+**2. Unix file modes are asserted on Windows.**
 `scripts/proof-output-security.test.mjs` requires `fs.statSync(reportFile).mode & 0o777 === 0o600` (384). This machine got **438** (`0o666`). Windows does not keep Unix 0600. The rest of that file’s secret-scrub checks are a good idea; the mode assert is not portable.
 
-**3. Offline proof then dies on `fsync`.**  
+**3. Offline proof then dies on `fsync`.**
 `npm run proof:offline` ran **22/22 named checks `ok: true`** (exact create/verify/settle, payment-id idempotency, exact replay `409 invalid_transaction_state`, batch genesis/voucher/claim/top-up/refund construction, fixture reproducibility against compiler `3ed9733`). Summary then: `"ok": false, "error": "EPERM: operation not permitted, fsync"`. The protocol checks passed. The Windows write-out did not.
 
 That is a real break of the **reproducibility claim** (“locally: `npm ci && npm test`”). It is not a break of the covenant math.
