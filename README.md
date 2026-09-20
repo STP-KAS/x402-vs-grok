@@ -181,3 +181,12 @@ Master-file R-X402 now reads **v1.0.0-rc.1, TN10, mainnet blocked** (was alpha.1
 - Field (Parker, kaspanet, Kali, KASPACOM, kaspahttp402, STP-KAS): [ECOSYSTEM.md](ECOSYSTEM.md)
 - Ishum is a till, not this protocol: [STP-KAS/x402-ishum](https://github.com/STP-KAS/x402-ishum)
 - HTTP 402 costumes vs this binding: [STP-KAS/402-is-not-x402](https://github.com/STP-KAS/402-is-not-x402)
+
+---
+
+> **Standard disclaimer.** This GitHub, not the topic above.
+>
+> Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
+>
+> Intern at https://sixpack.wtf/  
+> X: https://x.com/StppStp · GitHub: https://github.com/STP-KAS
