@@ -19,7 +19,7 @@ Intel used: [STP-KAS/kaspa-master-file](https://github.com/STP-KAS/kaspa-master-
 | Hosted gateway | `1.0.0-rc.1` on [demo.kaspa-x402.org](https://demo.kaspa-x402.org) |
 | Compiler they compiled with | SilverScript **v1.0.0** `3ed973335b59269293564805cc2c58a14595ec03` |
 | CAIP | [ChainAgnostic/namespaces#193](https://github.com/ChainAgnostic/namespaces/pull/193) **open, not merged** |
-| Master-file pin | updated this pass to **v1.0.0-rc.1, TN10, mainnet blocked** ([kaspa-master-file@662c77a](https://github.com/STP-KAS/kaspa-master-file/commit/662c77a)) |
+| Master-file pin | updated this pass to **v1.0.0-rc.1, TN10, mainnet blocked** ([kaspa-master-file@662c77a](https://github.com/STP-KAS/kaspa-master-file/commit/c34eea0)) |
 
 **Verdict in one line:** this is a real x402 **v2 binding** for native KAS, and it is **not** v1, **not** mainnet, **not** in the upstream x402 registry, **not** a registered CAIP namespace. Bind this envelope. Do not call RC1 “Kaspa has x402.”
 
